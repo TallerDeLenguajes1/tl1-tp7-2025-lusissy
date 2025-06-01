@@ -9,19 +9,28 @@ namespace EspacioCalculadora
             dato+=termino;   
          }
          
-        void Restar(double termino)
+        public void Restar(double termino)
         {
             dato-=termino;
         }
-        void Multiplicar(double Termino){
-            
+        public void Multiplicar(double Termino){
+            dato=dato*Termino;
         }
-        void Dividir(double Termino){}
-        void Limpiar(){}
-        public double GetResultado()
+        public void Dividir(double Termino){
+            if(Termino!=0){
+                dato=dato/Termino;
+            }else {
+                Console.WriteLine("No se puede dividir en 0");
+            }
+        }
+        public void Limpiar(){
+             dato = 0;
+        }
+        public double Resultado
         {
-            return dato;
+            get { return dato; }
         }
+
 
     }
 }
